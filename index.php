@@ -1,16 +1,17 @@
 <?php
-  $name = $_POST['name'];
-  $contact = $_POST['contact'];
-  $items = strtoupper($_POST['items']);
-  $from = $_POST['email'];
-  $to = 'kafil.ahmedtd@gmail.com, shahbaazmacchiwala@gmial.com';
-  $subject = 'New order request' ;
-  $body = "Hi $name \n";
-  $body .=  "My contact no: $contact \n";
-  $body .= "My Order is : $items" ;
-  $error_msg = "";
-  $error = "";
   if($_POST['submit']){
+    $name = $_POST['name'];
+    $contact = $_POST['contact'];
+    $items = $_POST['items'];
+    $from = $_POST['email'];
+    $to = 'kafil.ahmedtd@gmail.com, shahbaazmacchiwala@gmial.com';
+    $subject = 'New order request' ;
+    $body = "My Name: ". ucfirst($name) ."\n";
+    $body .=  "My contact no: $contact \n";
+    foreach($items as $item){
+      $body .= "List of item: ". ucfirst($item)."\n";
+    }
+    $error = "";
     if(mail($to, $subject, $body, $from)){
       $error = 1;
     }else{
@@ -117,7 +118,7 @@
                     <td>Pick your choice</td>
                     <td>
                       
-                      <select id="items" name="items" multiple="multiple">
+                      <select id="items" name="items[]" multiple="multiple">
                         <option value="pomfret">Pomfret</option>
                         <option value="kafree">Kafree</option>
                         <option value="prawns">Prawns</option>

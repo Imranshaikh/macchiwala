@@ -51,33 +51,44 @@
     <!--[if lte IE 8]><link rel="stylesheet" href="css/ie8.css" /><![endif]-->
   </head>
   <body class="homepage">
+    <div class="container">
+      <div class="span12">
+        <div class="error">
+          <?php 
+            if($error == 1){
+          ?>
+              <div class="alert alert-success alert-dismissable">
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                <strong>Thank you!</strong> your order has been sent.
+              </div> 
+          <?php
+            }elseif($error == 2){
+          ?>
+              <div class="alert alert-danger alert-dismissable">
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                <strong>Sorry!</strong> something went wrong, please <a href="" data-toggle="modal" data-target="#myModal">order</a> again. 
+              </div> 
+          <?php    
+            }
+          ?>  
+        </div>          
+      </div>
+    </div>
     
-    <!-- Modal box -->
+    <!-- Banner -->
+    <div id="banner">
+      <h2>We love the fish not the fish market</h2>
+      <span class="byline">
+        We provide 100% customization of fresh seafood to our consumers. Your seafood can be cut, cleaned, piled, filleted, sliced, chopped as per your requirement.
+      </span>
+    </div>
+        <!-- Modal box -->
     <!-- Button trigger modal -->
     <center style="padding:5px">
       <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
         Order Now!
       </button>
     </center>
-    <div class="error">
-      <?php 
-        if($error == 1){
-      ?>
-          <div class="alert alert-success alert-dismissable">
-            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-            <strong>Thank you!</strong> your order has been sent.
-          </div> 
-      <?php
-        }elseif($error == 2){
-      ?>
-          <div class="alert alert-danger alert-dismissable">
-            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-            <strong>Sorry!</strong> something went wrong, please <a href="" data-toggle="modal" data-target="#myModal">order</a> again. 
-          </div> 
-      <?php    
-        }
-      ?>  
-    </div>
     
     <!-- Modal -->
     <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -157,14 +168,6 @@
             </div>
         </div>
       </div>
-    </div>
-    
-    <!-- Banner -->
-    <div id="banner">
-      <h2>We love the fish not the fish market</h2>
-      <span class="byline">
-        We provide 100% customization of fresh seafood to our consumers. Your seafood can be cut, cleaned, piled, filleted, sliced, chopped as per your requirement.
-      </span>
     </div>
 
     <!-- Carousel -->

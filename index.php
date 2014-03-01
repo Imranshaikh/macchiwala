@@ -40,7 +40,7 @@
     
     <link rel="stylesheet" type="text/css" href="css/bootstrap-3.0.3.min.css">
     <link rel="stylesheet" type="text/css" href="css/bootstrap-multiselect.css">
-
+    <link rel="icon" type="image/x-icon" href="images/favicon.png">
     <noscript>
       <link rel="stylesheet" href="css/skel-noscript.css" />
       <link rel="stylesheet" href="css/style.css" />

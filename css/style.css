@@ -501,6 +501,14 @@
         {
         }
 
+.input-append{
+  padding: 1px !important;
+}
+
+.error{
+  padding-top: 5px;
+}
+
   /* Buttons */
     
     .button

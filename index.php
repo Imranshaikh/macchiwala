@@ -102,7 +102,9 @@
               <form role="form" method="POST" action="index.php" >
                 <table>
                   <tr>
-                    <td>Name</td>
+                    <td>
+                      <label for="name">Name</label>
+                    </td>
                     <td>
                       <div class="input-append">
                         <input type="text" name="name" class="form-control" placeholder="Enter your name" required />  
@@ -110,7 +112,9 @@
                     </td>
                   </tr>
                   <tr>
-                    <td>Contact No</td>
+                    <td>
+                      <label for="contact">Contact No</label>
+                    </td>
                     <td>
                       <div class="input-append">
                         <input type="text" name="contact" class="form-control" placeholder="Enter your contact no" required />
@@ -118,7 +122,9 @@
                     </td>
                   </tr>
                   <tr>
-                    <td>Email</td>
+                    <td>
+                      <label for="email">Email</label>
+                    </td>
                     <td>
                       <div class="input-append">
                         <input type="email" name="email" class="form-control" placeholder="Enter your email" required />
@@ -126,7 +132,9 @@
                     </td>
                   </tr>
                   <tr>
-                    <td>Pick your choice</td>
+                    <td>
+                      <label for="items">Pick your choice</label>
+                    </td>
                     <td>
                       
                       <select id="items" name="items[]" multiple="multiple">
@@ -152,10 +160,12 @@
                     </td>
                   </tr>
                   <tr>
-                    <td>Enquiry</td>
+                    <td>
+                      <label for="enquiry"> Enquiry </label>
+                    </td>
                     <td>
                       <div class="input-append">
-                        <textarea value="enquiry"></textarea>  
+                        <textarea class="form-control" rows="3" name="enquiry"></textarea>  
                       </div>
                     </td>
                   </tr>

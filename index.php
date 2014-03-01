@@ -3,6 +3,7 @@
     $name = $_POST['name'];
     $contact = $_POST['contact'];
     $items = $_POST['items'];
+    $enquiry = $_POST['enquiry'];
     $from = $_POST['email'];
     $to = 'kafil.ahmedtd@gmail.com, shahbaazmacchiwala@gmial.com';
     $subject = 'New order request' ;
@@ -10,6 +11,9 @@
     $body .=  "My contact no: $contact \n";
     foreach($items as $item){
       $body .= "List of item: ". ucfirst($item)."\n";
+    }
+    if(!empty($enquiry)){
+      $body .= "Enquiry: $enquiry \n";  
     }
     $error = "";
     if(mail($to, $subject, $body, $from)){
@@ -51,30 +55,8 @@
     <!--[if lte IE 8]><link rel="stylesheet" href="css/ie8.css" /><![endif]-->
   </head>
   <body class="homepage">
-    <div class="container">
-      <div class="span12">
-        <div class="error">
-          <?php 
-            if($error == 1){
-          ?>
-              <div class="alert alert-success alert-dismissable">
-                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-                <strong>Thank you!</strong> your order has been sent.
-              </div> 
-          <?php
-            }elseif($error == 2){
-          ?>
-              <div class="alert alert-danger alert-dismissable">
-                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-                <strong>Sorry!</strong> something went wrong, please <a href="" data-toggle="modal" data-target="#myModal">order</a> again. 
-              </div> 
-          <?php    
-            }
-          ?>  
-        </div>          
-      </div>
-    </div>
-    <center><img src="images/macchiwala_logo.png" /></center>
+    <center><img src="images/macchiwala_logo.png" /></center> 
+    
     <!-- Banner -->
     <div id="banner">
       <h2>We love the fish not the fish market</h2>
@@ -85,9 +67,34 @@
         <!-- Modal box -->
     <!-- Button trigger modal -->
     <center style="padding:5px">
+      <div class="container">
+        <div class="span12">
+
+          <div class="error">
+            <?php 
+              if($error == 1){
+            ?>
+                <div class="alert alert-success alert-dismissable">
+                  <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                  <strong>Thank you!</strong> your order has been sent.
+                </div> 
+            <?php
+              }elseif($error == 2){
+            ?>
+                <div class="alert alert-danger alert-dismissable">
+                  <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                  <strong>Sorry!</strong> something went wrong, please <a href="" data-toggle="modal" data-target="#myModal">order</a> again. 
+                </div> 
+            <?php    
+              }
+            ?>  
+          </div>          
+        </div>
+      </div>
       <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
         Order Now!
       </button>
+      
     </center>
     
     <!-- Modal -->

@@ -74,7 +74,7 @@
         </div>          
       </div>
     </div>
-    
+    <center><img src="images/macchiwala_logo.png" /></center>
     <!-- Banner -->
     <div id="banner">
       <h2>We love the fish not the fish market</h2>

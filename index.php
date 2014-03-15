@@ -42,8 +42,9 @@
     <script type="text/javascript" src="js/bootstrap-3.0.3.min.js"></script>
     <script type="text/javascript" src="js/bootstrap-multiselect.js"></script>
     
-    <link rel="stylesheet" type="text/css" href="css/bootstrap-responsive.css">
+<!--    <link rel="stylesheet" type="text/css" href="css/bootstrap-responsive.css">
     <link rel="stylesheet" type="text/css" href="css/bootstrap-responsive.min.css">
+-->
     <link rel="stylesheet" type="text/css" href="css/bootstrap-3.0.3.min.css">
     <link rel="stylesheet" type="text/css" href="css/bootstrap-multiselect.css">
     <link rel="icon" type="image/x-icon" href="images/favicon.png">
